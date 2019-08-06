@@ -20,7 +20,13 @@ class App extends Component {
   }
 
   render() {
-
+    //Routering SPA (Single Page Aplication)
+    const url = new URL(document.location);
+    const hasId = url.searchParams.has('id');
+    
+    if(hasId){
+      return <Detail/>
+    }
 
     return (
       <div className="App">
